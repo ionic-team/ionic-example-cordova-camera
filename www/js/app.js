@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.services', 'starter.controllers'])
 
 .config(function($compileProvider){
   $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);
@@ -20,20 +20,4 @@ angular.module('starter', ['ionic', 'starter.services'])
   });
 })
 
-.controller('MainCtrl', function($scope, Camera) {
 
-  $scope.getPhoto = function() {
-    Camera.getPicture().then(function(imageURI) {
-      console.log(imageURI);
-      $scope.lastPhoto = imageURI;
-    }, function(err) {
-      console.err(err);
-    }, {
-      quality: 75,
-      targetWidth: 320,
-      targetHeight: 320,
-      saveToPhotoAlbum: false
-    });
-  };
-
-})
