@@ -1,40 +1,27 @@
-Ionic App Base
+Ionic Cordova Camera Example
 =====================
 
-A starting project for Ionic that optionally supports
-using custom SCSS.
-
-## Using this project
-
-We recommend using the `ionic` utility to create new Ionic projects that are based on this project but use a ready-made starter template.
-
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
-
-```bash
-$ sudo npm install -g ionic
-```
-
-Then run:
-
-```bash
-$ sudo npm install -g ionic
-$ ionic start myProject tabs
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page.
+An example of how to use the Cordova Camera API with Ionic
 
 ## Installation
-
-While we recommend using the `ionic` utility to create new Ionic projects, you can use this repo as a barebones starting point to your next Ionic app.
 
 To use this project as is, first clone the repo from GitHub, then run:
 
 ```bash
-$ cd ionic-app-base
-$ sudo npm install -g cordova ionic gulp
+$ cd ionic-example-cordova-camera
 $ npm install
-$ gulp init
 ```
+
+To test on iOS you will need to [be part of the iOS developer program](https://developer.apple.com/programs/ios/). If you are, first run:
+
+```bash
+$ ionic platform add ios
+$ ionic build ios
+```
+
+You can then open XCode and select ````ionic-example-cordova-camera/platforms/ios```` as the project. In the upper left corner, select your iOS device and click the build button (play button) to build the app and deploy to your device for testing.
+
+**NB:** The camera functionality will only work on a real device, and not in an emulator or browser!
 
 ## Using Sass (optional)
 
